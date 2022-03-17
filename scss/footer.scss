@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+.footer {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 50px;
+}
+
+.footer.grid {
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.footer .list {
+    text-align: center;
+    font-size: .85rem;
+}
+
+.footer .list > .list__item {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1000px) {
+    .footer {
+        width: 100%;
+        min-height: 200px;
+        padding: 50px 100px 40px;
+    }
+
+    .footer.grid {
+        grid-template-columns: 30% 1fr;
+        justify-items: stretch;
+        row-gap: 10px;
+    }
+
+    .footer .list {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+
+        .sub-list {
+            margin-top: 40px;
+
+            .list__item {
+                line-height: 1.9;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

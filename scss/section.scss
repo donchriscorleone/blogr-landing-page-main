@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+.section {
+    text-align: center;
+    padding: 10px 20px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.section.grid {
+    row-gap: 30px;
+}
+
+.section__header {
+    font-family: $font-ubuntu;
+    font-weight: 500;
+}
+
+.section__header--sm {
+    font-size: 1.8rem;
+}
+
+.section__header--lg {
+    font-size: 2.4rem;
+}
+
+.section__header--blue {
+    color: $headings-color;
+}
+
+.section__header--white {
+    color: $white-text;
+}
+
+.section__content {
+    font-family: $font-overpass;
+    line-height: 1.7;
+}
+
+.section__content--gray {
+    color: $body-copy-color;
+}
+
+.section__content--white {
+    color: $white-text;
+}
+
+.section__content__lightgray {
+    color: $footer-text;
+}
+
+@media screen and (min-width: 1000px) {
+    .section__header--sm {
+        font-size: 1.5rem;
+    }
+
+    .section__header--lg {
+        font-size: 1.9rem;
+    }
+
+    .section__content {
+        font-size: 1rem;
+    }
+}

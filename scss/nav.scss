@@ -1,0 +1,216 @@
+@import './variables.scss';
+
+.nav {
+    height: 90vh;
+    padding: 20px 40px;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav-item-container {
+    margin-top: 30px;
+}
+
+.nav.banner {
+    background: url('./../images/bg-pattern-intro-mobile.svg'), linear-gradient(to bottom, $very-light-red, $light-red), ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav .list {
+    display: none;
+}
+
+.modal {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s;
+    position: absolute;
+    max-width: 400px;
+    left: 0; 
+    right: 0; 
+    margin: 10px auto;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    &.modal__visible {
+        max-height: 100vh;
+        overflow: visible;
+        padding: 15px;
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+        .list__item-header {
+            font-weight: 700;
+            color: $headings-color;
+        }
+
+        .list__item-header-icon.open {
+            transition: all .3;
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+
+        .sub-list {
+            margin-bottom: 20px;
+            max-height: 0;
+            overflow: hidden;
+
+            .list__item {
+                line-height: 2;
+            }
+        }
+
+        .sub-list__visible {
+            max-height: 100vh;
+            overflow: visible;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.login-signup .btn {
+    display: none;
+}
+
+.login-signup {
+    margin-left: auto;
+    align-self: center;
+}
+
+.nav .block {
+    margin-top: 100px;
+}
+
+.nav .block__text-center {
+    text-align: center;
+}
+
+.nav .block .section__header {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width: 950px) {
+    .nav {
+        height: 70vh;
+    }
+
+    .nav.banner {
+        background: url('./../images/bg-pattern-intro-desktop.svg'), linear-gradient(to right, $very-light-red, $light-red);
+        background-position: center;
+    }
+
+    .nav .list {
+        display: contents;
+    }
+
+    .nav .list__item-header {
+        color: $footer-text;
+        position: relative;
+        font-weight: 700;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .nav .modal {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav .sub-list {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        position: absolute;
+        transition: all .3s;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .2;
+
+        .list__item {
+            font-size: .9rem;
+            line-height: 1.3;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .nav .list__item-header-icon.open {
+        &::after {
+            transform: rotate(0deg);
+        }
+    }
+
+    .sub-list {
+        transition: all .3s;
+
+        &.sub-list__visible {
+            max-height: 100vh;
+            padding: 15px;
+            overflow: hidden;
+        }
+    }
+
+    .flex {
+        column-gap: 40px;
+    }
+
+    .login-signup {
+        align-self: flex-start;
+    }
+
+    .nav__burger {
+        display: none;
+    }
+
+    .login-signup .btn {
+        display: inline;
+    }
+
+    .nav .block {
+        margin-top: 90px;
+    }
+
+    .nav .block .section__header {
+        font-size: 2.8rem;
+    }
+
+    .nav .block .section__content {
+        font-size: 1.3rem;
+    }
+}

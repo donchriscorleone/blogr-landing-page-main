@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.btn {
+    border-radius: 20px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    font-family: $font-ubuntu;
+    border: none;
+}
+
+.btn--sm {
+    padding: 10px;
+}
+
+.btn--lg {
+    padding: 15px 20px;
+}
+
+.btn--outline {
+    border: 1px solid $white-text;
+    background-color: $cta-hover-bg;
+    color: $white-text;
+}
+
+.btn--outline:hover {
+    background-color: $white-text;
+    color: $cta-hover-bg;
+}
+
+.btn--white {
+    background-color: $white-text;
+    color: $cta-text;
+}
+
+.btn--transparent {
+    background-color: transparent;
+    color: $footer-text;
+}
+
+.btn--white:hover {
+    color: $white-text;
+    background-color: $footer-text;
+}
+
+.btn--gradient {
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: $white-text;
+}

@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+.img-container {
+    width: 100%;
+    height: 400px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    max-width: 400px;
+}
+
+.editor-container {
+    background-image: url('./../images/illustration-editor-mobile.svg');
+}
+
+.phones-container {
+    background-image: url('./../images/illustration-phones.svg');
+}
+
+.laptop-container {
+    background-image: url('./../images/illustration-laptop-mobile.svg');
+}
+
+@media screen and (min-width: 1000px) {
+    .img-container {
+        background-size: cover;
+    }
+    .editor-container {
+        background-image: url('./../images/illustration-editor-desktop.svg');
+    }
+
+    .laptop-container {
+        background-image: url('./../images/illustration-laptop-desktop.svg');
+    }
+}

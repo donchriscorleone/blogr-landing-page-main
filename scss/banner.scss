@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.banner {
+    padding: 20px;
+}
+
+.banner-radius-bottom-left {
+    border-bottom-left-radius: 70px;
+}
+
+.banner-radius-top-right {
+    border-top-right-radius: 70px;
+}
+
+.banner-skewed {
+    transform: skew(19deg);
+    -webkit-transform: skew(19deg);
+    -moz-transform: skew(19deg);
+}
+
+.banner-dark-blue {
+    background-color: $very-dark-gray-blue;
+}
+
+.banner-black {
+    background-color: $footer-bg;
+}
+// banner-skewed banner-dark-blue banner-black 

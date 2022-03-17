@@ -1,0 +1,59 @@
+@import './variables.scss';
+
+.block {
+    margin: 25px auto 50px;
+}
+
+.block.grid {
+    justify-items: center;
+}
+
+.block--header__text {
+    font-family: $font-overpass;
+}
+
+@media screen and (min-width: 1000px) {
+    .block {
+        margin: 50px auto 80px;
+    }
+
+    .block.grid {
+        grid-template-columns: 1fr 1fr;
+
+        .section {
+            text-align: left;
+        }
+    }
+
+    .block.grid:first-child {
+
+        .section.block--header {
+            grid-column: 1 / 3;
+        }
+
+        .editor-container {
+            grid-column: 2 / 3;
+        }
+
+        .block--content {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+    }
+
+    .block.grid:nth-child(2) {
+        .block--content {
+            align-self: center;
+        }
+
+        // .phones-container::after {
+        //     content: '';
+        //     background-image: url('./../images/bg-pattern-circles.svg');
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     position: absolute;
+        //     width: 400px;
+        //     height: 300px;
+        // }
+    }
+}

@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.list, .sub-list {
+    list-style-type: none;
+}
+
+.list--inline .list--inline__item {
+    display: inline-block;
+}
+
+.list__item-header {
+    margin-bottom: 20px;
+    font-family: $font-overpass;
+}
+
+.list__item {
+    position: relative;
+}
+
+.list__item-header-white {
+    color: $white-text;
+}
+
+.list__item-header-blue {
+    color: $headings-color;
+}
+
+.list__item-footer {
+    color: $footer-text;
+}
+
+.list__item-header-icon::after {
+    content: url('./../images/icon-arrow-dark.svg');
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    transform: rotate(180deg);
+}
+
+.sub-list .list__item {
+    margin: 4px auto 5px;
+    font-family: $font-ubuntu;
+}
+
+.sub-list .list__item-dark-blue {
+    color: $footer-text;
+}
+
+.sub-list .list__item-dark-blue {
+    color: $headings-color;
+}

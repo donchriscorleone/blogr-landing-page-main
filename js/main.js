@@ -36,10 +36,10 @@ if (burger !== null) {
     burger.addEventListener('click', (e) => {
         if (modal.classList.contains('modal__visible')) {
             modal.classList.remove('modal__visible')
-            burger.src="./../images/icon-hamburger.svg"
+            burger.src="./images/icon-hamburger.svg"
         } else {
             modal.classList.add('modal__visible');
-            burger.src="./../images/icon-close.svg"
+            burger.src="./images/icon-close.svg"
         }
 
         console.log(modal.classList)

@@ -15,3 +15,17 @@
 @import './nav.scss';
 @import './block.scss';
 @import './footer.scss';
+
+
+.attribution {
+    position: absolute;
+    margin: 0 auto;
+    left: 40%;
+    bottom: 10px;
+
+    a {
+        color: #aaa;
+        text-decoration: none;
+        font-family: $font-ubuntu;
+    }
+}

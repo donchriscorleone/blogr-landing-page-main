@@ -477,6 +477,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 40px 50px;
+  position: relative;
 }
 
 .footer.grid {
@@ -521,6 +522,17 @@
     text-decoration: underline;
     cursor: pointer;
   }
+}
+.attribution {
+  position: absolute;
+  margin: 0 auto;
+  left: 40%;
+  bottom: 10px;
+}
+.attribution a {
+  color: #aaa;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
